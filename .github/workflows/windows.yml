@@ -1,0 +1,21 @@
+name: Windows build and tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: windows-2022
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Configure
+        run: cmake --preset windows-debug
+      - name: Build Debug
+        run: cmake --build --preset windows-debug --parallel 4
+      - name: Test Debug
+        run: ctest --preset windows-debug
+      - name: Build Release
+        run: cmake --build --preset windows-release --parallel 4
+      - name: Test Release
+        run: ctest --preset windows-release
