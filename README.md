@@ -2,6 +2,13 @@
 
 An independent C++20 gameplay programming portfolio project. It generates connected mazes, adds walkable safe zones and hazards, and lets a player explore them in a small raylib viewer. The project is independent of Unreal Engine and uses no external art assets.
 
+## Preview
+
+![Procedural Hazard Maze Viewer](docs/images/maze-viewer.png)
+
+An interactive C++20 maze generator with safe zones,
+hazards, player movement, and connectivity validation.
+
 ## Features
 
 - Randomized Prim maze generation with a documented version 1 output contract.
